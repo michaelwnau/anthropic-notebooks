@@ -14,6 +14,7 @@ for leveraging Claude's capabilities across various use cases.
 
   ## Repository Structure
 
+```
   anthropic-notebooks/
   ├── computer-use/              # Notebooks for Claude's computer use capabilities
   │   ├── Lesson_2.ipynb
@@ -33,7 +34,7 @@ for leveraging Claude's capabilities across various use cases.
   ├── LICENSE
   ├── pyproject.toml            # Project configuration
   └── README.md
-
+```
   ## Prerequisites
 
   - Python 3.10 or higher
