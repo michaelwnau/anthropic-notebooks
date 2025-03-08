@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "anthropic-notebooks"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic",
+    "jupyter",
+    "notebook",
+    "ipykernel",
+    "matplotlib",
+    "pillow",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = []
+
+[tool.ruff.isort]
+known-first-party = ["anthropic"]
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]  # Include all files in the root directory
+
+[dependency-groups]
+dev = [
+    "ruff>=0.9.10",
+]
